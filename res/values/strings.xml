@@ -1,0 +1,11 @@
+<resources>
+
+    <string name="app_name">Simple Music Player</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="playpause">play/pause button</string>
+    <string name="artistspicture">picture of artist</string>
+    <string name="library">Library</string>
+    <string name="queue">Queue</string>
+
+</resources>

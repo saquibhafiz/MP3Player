@@ -1,0 +1,94 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ff000000" >
+
+    <RelativeLayout
+        android:id="@+id/actions"
+        android:layout_width="match_parent"
+        android:layout_height="70dip"
+        android:layout_alignParentBottom="true" >
+
+		    <ImageView
+		        android:id="@+id/playpausebutton"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentBottom="true"
+		        android:layout_alignParentRight="false"
+		        android:layout_centerInParent="true"
+		        android:layout_centerVertical="true"
+		        android:layout_marginBottom="25dp"
+		        android:maxWidth="45dip"
+		        android:src="@drawable/pause" />
+		    
+    </RelativeLayout>
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/actions"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dip"
+        android:paddingLeft="25dip"
+        android:paddingRight="25dip" />
+
+    <ListView
+        android:id="@+id/listoffiles"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/seekBar"
+        android:layout_below="@+id/order_selection"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="19dp"
+        android:layout_marginTop="10dip" >
+
+    </ListView>
+
+    <Spinner
+        android:id="@+id/order_selection"
+        android:layout_width="wrap_content"
+        android:layout_height="35dip"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="#ff000000" />
+
+    <TextView
+        android:id="@+id/sort_by"
+        android:layout_width="wrap_content"
+        android:layout_height="35dip"
+        android:layout_alignBaseline="@+id/order_selection"
+        android:layout_alignBottom="@+id/order_selection"
+        android:layout_marginRight="15dip"
+        android:layout_toLeftOf="@+id/order_selection"
+        android:text="Sort by: "
+        android:textColor="#ffffffff" />
+
+    <Switch
+        android:id="@+id/library_queue_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="35dip"
+        android:layout_above="@id/listoffiles"
+        android:layout_alignParentLeft="true"
+        android:textOff="@string/queue"
+        android:textOn="@string/library" />
+
+    <TextView
+        android:id="@+id/current_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/seekBar"
+        android:layout_toLeftOf="@+id/total_time"
+        android:textColor="#ffffffff" />
+
+    <TextView
+        android:id="@+id/total_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/current_time"
+        android:layout_alignParentRight="true"
+        android:paddingRight="15dip"
+        android:textColor="#ffffffff" />
+
+</RelativeLayout>
