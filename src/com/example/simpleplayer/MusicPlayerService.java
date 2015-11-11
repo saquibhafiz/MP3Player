@@ -78,7 +78,9 @@ public class MusicPlayerService extends Service implements MusicPlayerServiceInt
 	}
 	
 	public synchronized void playNext() {
-		playFetched(mNowPlaying.next().getMusicLocation());
+		if(mNowPlaying.next() != null) {
+			playFetched(mNowPlaying.next().getMusicLocation());
+		}
 	}
 	
 	private synchronized void playFetched(String path) {

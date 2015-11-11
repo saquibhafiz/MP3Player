@@ -50,7 +50,7 @@ public class Queue {
 	}
 	
 	public Music next() {
-		current = ++current % queue.size();
+		current = queue.size()==0 ? queue.size() : ++current % queue.size();
 		if (queue.size() >= 1 && random) return random_queue.get(current%random_queue.size());
 		else if (queue.size() >= 1) return queue.get(current%queue.size());
 		else return null;
